@@ -1,12 +1,16 @@
 
 pipeline {
     agent { node { label 'Agen-mahesh'}}
+    options {
+    ansiColor('xterm')  // or 'xterm-256color'
+  }
 
     stages {
 
         stage('Init') {
             steps {
                 sh '''
+                        cd 
                         ls -ltr
                         pwd
                         terraform init
