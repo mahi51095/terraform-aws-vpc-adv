@@ -7,6 +7,8 @@ pipeline {
         stage('Init') {
             steps {
                 sh '''
+                        ls -ltr
+                        pwd
                         terraform init
                    '''
                 // Example: Compile code or install dependencies
@@ -17,6 +19,8 @@ pipeline {
         stage('Plan') {
             steps {
                 sh '''
+                        ls -ltr
+                        pwd
                         terraform plan
                    '''
                 // Example: Run test scripts or tools like pytest, JUnit, etc.
